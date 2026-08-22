@@ -60,7 +60,6 @@
   .eyebrow {
   @apply font-mono text-4xl tracking-wide uppercase text-green-600 sm:text-5xl;
 }
-  }
 
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 rounded-md bg-green-400 px-6 py-3
