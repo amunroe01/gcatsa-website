@@ -58,7 +58,8 @@
   }
 
   .eyebrow {
-    @apply font-mono text-xs tracking-[0.25em] uppercase text-green-600;
+  @apply font-mono text-4xl tracking-wide uppercase text-green-600 sm:text-5xl;
+}
   }
 
   .btn-primary {
