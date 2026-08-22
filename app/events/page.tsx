@@ -16,7 +16,7 @@ export default function EventsPage() {
         <div className="absolute inset-0 bg-circuit-grid bg-[size:40px_40px] opacity-30" aria-hidden="true" />
         <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <p className="eyebrow justify-center">Competitive Events</p>
+            <p className="eyebrow justify-center text-4xl tracking-wide sm:text-5xl">Competitive Events</p>
             <h1 className="mt-3 text-4xl font-black text-white sm:text-5xl">
               GCA TSA Events Catalog
             </h1>
