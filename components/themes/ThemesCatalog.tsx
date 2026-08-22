@@ -109,7 +109,7 @@ export default function ThemesCatalog() {
               {t.resources && t.resources.length > 0 && (
                 <div className="mt-4 flex flex-col gap-1 border-t border-navy-100 pt-4">
                   {t.resources.map((r) => (
-                    
+                    <a
                       key={r.url}
                       href={r.url}
                       target="_blank"
