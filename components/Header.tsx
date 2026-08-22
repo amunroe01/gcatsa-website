@@ -30,10 +30,12 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-navy-700/20 bg-navy-800 shadow-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
-        <Link
-          href="/"
+        <a
+          href="https://www.sarasotacountyschools.net/o/gulfcoastacademy"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center gap-3 rounded py-1"
-          aria-label="Gulf Coast Academy TSA home"
+          aria-label="Gulf Coast Academy of Innovation & Technology main school site (opens in a new tab)"
         >
           <Image
             src="/images/logo-horizontal-dark.png"
@@ -43,15 +45,7 @@ export default function Header() {
             className="h-14 w-auto"
             priority
           />
-          <span className="hidden flex-col leading-tight sm:flex">
-            <span className="font-display text-sm font-bold uppercase tracking-wide text-white">
-              Gulf Coast Academy
-            </span>
-            <span className="font-heading text-xs font-semibold uppercase tracking-[0.2em] text-green-400">
-              Technology Student Association
-            </span>
-          </span>
-        </Link>
+        </a>
 
         {/* Desktop nav */}
         <nav aria-label="Primary" className="hidden lg:block">
