@@ -224,7 +224,7 @@ export default function EventsCatalog() {
 
               <div className="mt-4 flex flex-col gap-1 border-t border-navy-100 pt-4">
                 {event.resources.map((r) => (
-                  <a
+                  
                     key={r.url}
                     href={r.url}
                     target="_blank"
