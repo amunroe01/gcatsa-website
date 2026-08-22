@@ -21,11 +21,11 @@ export default function Hero() {
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
           <Image
-            src="/images/logo-circular.png"
-            alt="Gulf Coast Academy of Innovation & Technology emblem"
-            width={140}
-            height={140}
-            className="mx-auto mb-8 h-32 w-32 drop-shadow-[0_0_25px_rgba(91,197,0,0.35)] sm:h-36 sm:w-36"
+            src="/images/logo-tsa-shield.png"
+            alt="Gulf Coast Academy TSA shield emblem"
+            width={220}
+            height={220}
+            className="mx-auto mb-8 h-40 w-40 drop-shadow-[0_0_25px_rgba(91,197,0,0.35)] sm:h-48 sm:w-48"
             priority
           />
         </motion.div>
