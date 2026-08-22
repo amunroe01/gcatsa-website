@@ -1,0 +1,19 @@
+import Hero from "@/components/home/Hero";
+import Mission from "@/components/home/Mission";
+import EventsCarousel from "@/components/home/EventsCarousel";
+import WhyJoin from "@/components/home/WhyJoin";
+import ParentSection from "@/components/home/ParentSection";
+import AlumniSponsors from "@/components/home/AlumniSponsors";
+
+export default function HomePage() {
+  return (
+    <>
+      <Hero />
+      <Mission />
+      <EventsCarousel />
+      <WhyJoin />
+      <ParentSection />
+      <AlumniSponsors />
+    </>
+  );
+}

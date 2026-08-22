@@ -23,9 +23,9 @@ export default function Hero() {
           <Image
             src="/images/logo-tsa-shield.png"
             alt="Gulf Coast Academy TSA shield emblem"
-            width={220}
-            height={220}
-            className="mx-auto mb-8 h-40 w-40 drop-shadow-[0_0_25px_rgba(91,197,0,0.35)] sm:h-48 sm:w-48"
+            width={400}
+            height={400}
+            className="mx-auto mb-8 h-64 w-64 drop-shadow-[0_0_25px_rgba(91,197,0,0.35)] sm:h-80 sm:w-80 md:h-96 md:w-96"
             priority
           />
         </motion.div>
