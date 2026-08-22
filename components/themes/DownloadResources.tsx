@@ -27,7 +27,7 @@ export default function DownloadResources() {
         <ul className="mt-10 divide-y divide-white/10 overflow-hidden rounded-lg border border-white/10">
           {downloads.map((d) => (
             <li key={d.url}>
-              
+              <a
                 href={d.url}
                 target="_blank"
                 rel="noopener noreferrer"
