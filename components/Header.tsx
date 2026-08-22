@@ -3,12 +3,13 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/events", label: "Events" },
-  { href: "/themes", label: "2027 Themes & Problems" },
+  { href: "/themes", label: "2027 Themes" },
   { href: "/calendar", label: "Calendar" },
   { href: "/officers", label: "Officers" },
   { href: "/about", label: "About Us" },
@@ -17,6 +18,7 @@ const NAV_LINKS = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   // Close the mobile menu whenever the viewport is resized back to desktop
   useEffect(() => {
@@ -50,16 +52,24 @@ export default function Header() {
         {/* Desktop nav */}
         <nav aria-label="Primary" className="hidden lg:block">
           <ul className="flex items-center gap-1">
-            {NAV_LINKS.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="block rounded px-3 py-2 font-heading text-sm font-semibold uppercase tracking-wide text-white/90 transition-colors hover:bg-white/10 hover:text-green-400"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {NAV_LINKS.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    aria-current={isActive ? "page" : undefined}
+                    className={`block rounded px-3 py-2 font-heading text-sm font-semibold uppercase tracking-wide transition-colors ${
+                      isActive
+                        ? "bg-green-400 text-navy-900 hover:bg-green-400"
+                        : "text-white/90 hover:bg-white/10 hover:text-green-400"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
 
@@ -86,17 +96,25 @@ export default function Header() {
       {open && (
         <nav id="mobile-nav" aria-label="Primary mobile" className="border-t border-white/10 bg-navy-800 lg:hidden">
           <ul className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
-            {NAV_LINKS.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className="block rounded px-3 py-3 font-heading text-base font-semibold uppercase tracking-wide text-white/90 hover:bg-white/10 hover:text-green-400"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {NAV_LINKS.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    aria-current={isActive ? "page" : undefined}
+                    className={`block rounded px-3 py-3 font-heading text-base font-semibold uppercase tracking-wide ${
+                      isActive
+                        ? "bg-green-400 text-navy-900"
+                        : "text-white/90 hover:bg-white/10 hover:text-green-400"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
             <li className="pt-2">
               <Link
                 href="/get-involved"
