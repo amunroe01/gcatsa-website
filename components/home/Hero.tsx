@@ -36,7 +36,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="eyebrow"
         >
-          Gulf Coast Academy · Chapter of the Technology Student Association
+          DRIVEN BY CURIOSITY . POWERED BY INNOVATIONS
         </motion.p>
 
         <motion.h1
@@ -54,8 +54,8 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.45 }}
           className="mt-6 max-w-2xl font-heading text-lg font-medium text-white/85 sm:text-xl"
         >
-          Preparing tomorrow&apos;s innovators through leadership, technology,
-          engineering, and design.
+          Preparing tomorrow&apos;s innovative leaders through, design technology,
+          engineering, and manufacturing.
         </motion.p>
 
         <motion.div
