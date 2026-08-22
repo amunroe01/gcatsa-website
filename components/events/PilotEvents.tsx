@@ -7,13 +7,13 @@ export default function PilotEvents() {
     <section className="bg-white py-16 sm:py-20" aria-labelledby="pilot-events-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="eyebrow justify-center">New For 2026</p>
+          <p className="eyebrow justify-center text-4xl tracking-wide sm:text-5xl">New For 2026</p>
           <h2 id="pilot-events-heading" className="mt-3 text-3xl font-black text-navy-800 sm:text-4xl">
-            Florida State Conference Pilot Events
+            Florida TSA State Conference Pilot Events
           </h2>
           <p className="mt-4 font-body text-steel-700">
             These events are being piloted at the Florida TSA State Conference
-            only — they are not yet part of the National TSA event lineup.
+            ONLY — they are not yet part of the National TSA event lineup.
             Ask your chapter advisor before committing, since pilot events
             can change from year to year.
           </p>
