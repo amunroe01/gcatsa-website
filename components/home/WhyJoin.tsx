@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   Trophy,
   Presentation,
@@ -5,6 +6,7 @@ import {
   Crown,
   GraduationCap,
   Briefcase,
+  ArrowRight,
 } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
@@ -69,6 +71,13 @@ export default function WhyJoin() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={0.3} className="mt-14 flex justify-center">
+          <Link href="/get-involved" className="btn-primary">
+            Join TSA
+            <ArrowRight size={18} aria-hidden="true" />
+          </Link>
+        </Reveal>
       </div>
     </section>
   );
