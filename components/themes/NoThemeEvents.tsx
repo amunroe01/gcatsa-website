@@ -12,7 +12,7 @@ export default function NoThemeEvents() {
     <section className="bg-white py-16 sm:py-20" aria-labelledby="no-theme-heading">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center">
-          <p className="eyebrow justify-center">◆ No Set Theme</p>
+          <p className="eyebrow justify-center"> No Set Theme</p>
           <h2 id="no-theme-heading" className="mt-3 text-3xl font-black text-navy-800 sm:text-4xl">
             These Events Don&apos;t Have a Fixed Topic
           </h2>
