@@ -11,7 +11,7 @@ const TIMELINE = [
     year: "2023",
     title: "New Chapter Advisor",
     description:
-      "Alister Munroe, The current chapter advisor takes the helm at Brookside, Starting a New Chapter 1302's mission of hands-on STEM and leadership development. The new TSA program first stater with 18 members",
+      "Alister Munroe becomes the chapter's advisor, starting a new chapter in Chapter 1302's mission of hands-on STEM and leadership development. The program starts with 18 members",
   },
   {
     year: "2026–2027",
