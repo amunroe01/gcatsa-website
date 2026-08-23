@@ -21,7 +21,7 @@ export default function VolunteerCallout() {
             one-time process through the district, not GCA TSA, and it
             applies to every volunteer role on this page.
           </p>
-          
+          <a
             href="https://www.sarasotacountyschools.net/o/scs/page/level-2-volunteer-fingerprinting"
             target="_blank"
             rel="noopener noreferrer"
