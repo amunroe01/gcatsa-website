@@ -14,7 +14,7 @@ export default function DownloadResources() {
     <section className="bg-navy-800 py-16 sm:py-20" aria-labelledby="downloads-heading">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center">
-          <p className="eyebrow justify-center">◆ Download Center</p>
+          <p className="eyebrow justify-center"> Download Center</p>
           <h2 id="downloads-heading" className="mt-3 text-3xl font-black text-white sm:text-4xl">
             Official Theme Documents
           </h2>
