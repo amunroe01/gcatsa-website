@@ -1,13 +1,16 @@
-import { ShieldCheck, BrainCircuit, Bot, Wrench, Factory, Gamepad2, Rocket } from "lucide-react";
+import { Code2, ShieldCheck, BrainCircuit, Gamepad2, Wrench, Factory, Bot, Rocket } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
 const SPECIALTIES = [
+  // Top row
+  { icon: Code2, label: "Coding" },
   { icon: ShieldCheck, label: "Cybersecurity" },
   { icon: BrainCircuit, label: "Artificial Intelligence" },
-  { icon: Bot, label: "Robotics" },
+  { icon: Gamepad2, label: "Video Game Design" },
+  // Bottom row
   { icon: Wrench, label: "Engineering" },
   { icon: Factory, label: "Manufacturing" },
-  { icon: Gamepad2, label: "Video Game Design" },
+  { icon: Bot, label: "Robotics" },
   { icon: Rocket, label: "Emerging Technologies" },
 ];
 
