@@ -18,7 +18,7 @@ export default function ThemesPage() {
         <div className="absolute inset-0 bg-circuit-grid bg-[size:40px_40px] opacity-30" aria-hidden="true" />
         <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <p className="eyebrow justify-center">◆ 2026 &amp; 2027 Conference Cycle</p>
+            <p className="eyebrow justify-center"> 2026 &amp; 2027 Conference Cycle</p>
             <h1 className="mt-3 text-4xl font-black text-white sm:text-5xl">
               Themes &amp; Problems
             </h1>
