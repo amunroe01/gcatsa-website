@@ -5,13 +5,13 @@ const TIMELINE = [
     year: "Est.",
     title: "Brookside Middle School TSA — Chapter 1302",
     description:
-      "Long before the name changed, Chapter 1302 gave Brookside Middle School students their first taste of TSA competition, leadership, and hands-on STEM work.",
+      "For many years Brookside Middle School advisors and students have been involved in TSA competition, leadership, and hands-on STEM work. However during many years of not having an long term advisor Brookside middle school did not have an Advisor",
   },
   {
     year: "2023",
     title: "New Chapter Advisor",
     description:
-      "The current chapter advisor takes the helm at Brookside, continuing Chapter 1302's mission of hands-on STEM and leadership development.",
+      "Alister Munroe, The current chapter advisor takes the helm at Brookside, Starting a New Chapter 1302's mission of hands-on STEM and leadership development. The new TSA program first stater with 18 members",
   },
   {
     year: "2026–2027",
