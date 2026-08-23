@@ -33,7 +33,7 @@ const TIERS = [
   {
     name: "Platinum",
     price: "$1,000+",
-    accent: "border-navy-800",
+    accent: "border-white/30",
     badge: "bg-navy-800 text-white",
     benefits: [
       "Name listed on the chapter website's sponsor page",
