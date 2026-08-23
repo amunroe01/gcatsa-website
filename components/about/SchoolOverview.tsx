@@ -16,7 +16,7 @@ export default function SchoolOverview() {
     <section className="bg-white py-16 sm:py-20" aria-labelledby="overview-heading">
       <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
         <Reveal>
-          <p className="eyebrow justify-center">◆ Our School</p>
+          <p className="eyebrow justify-center"> Our School</p>
           <h2 id="overview-heading" className="mt-3 text-3xl font-black text-navy-800 sm:text-4xl">
             Gulf Coast Academy of Innovation &amp; Technology
           </h2>
