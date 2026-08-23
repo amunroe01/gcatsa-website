@@ -1,19 +1,19 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Pause, Play, CalendarDays, MapPin } from "lucide-react";
 import Reveal from "@/components/Reveal";
-import { UPCOMING_EVENTS } from "@/lib/upcomingEvents";
+import { CALENDAR_EVENTS, type CalendarColorGroup } from "@/lib/calendar";
 
 const AUTO_ADVANCE_MS = 12000; // rotates every 12s (within the requested 10–15s window)
+const MAX_SHOWN = 4;
 
-const CATEGORY_STYLES: Record<string, string> = {
-  Leadership: "bg-green-400 text-navy-900",
-  Regional: "bg-white text-navy-900",
-  Virtual: "bg-steel-500 text-white",
-  State: "bg-green-600 text-white",
+const COLOR_GROUP_STYLES: Record<CalendarColorGroup, string> = {
+  tsa: "bg-navy-800 text-white",
+  service: "bg-green-400 text-navy-900",
+  deadline: "bg-steel-500 text-white",
 };
 
 const variants = {
@@ -22,13 +22,38 @@ const variants = {
   exit: (direction: number) => ({ x: direction > 0 ? -80 : 80, opacity: 0 }),
 };
 
+function formatDateLabel(dateStart: string, dateEnd?: string, timeLabel?: string) {
+  const start = new Date(`${dateStart}T00:00:00`);
+  if (!dateEnd || dateEnd === dateStart) {
+    const dateFull = start.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+    return timeLabel ? `${dateFull} · ${timeLabel}` : dateFull;
+  }
+  const end = new Date(`${dateEnd}T00:00:00`);
+  const startMonth = start.toLocaleDateString("en-US", { month: "long" });
+  const endMonth = end.toLocaleDateString("en-US", { month: "long" });
+  return startMonth === endMonth
+    ? `${startMonth} ${start.getDate()}–${end.getDate()}, ${end.getFullYear()}`
+    : `${startMonth} ${start.getDate()} – ${endMonth} ${end.getDate()}, ${end.getFullYear()}`;
+}
+
 export default function EventsCarousel() {
   const [[index, direction], setSlide] = useState<[number, number]>([0, 1]);
   const [isPaused, setIsPaused] = useState(false);
-  const count = UPCOMING_EVENTS.length;
+
+  // Pulls straight from the shared calendar data — automatically shows
+  // whichever events are soonest, with no manual curation needed.
+  const events = useMemo(() => {
+    const todayStr = new Date().toISOString().slice(0, 10);
+    return CALENDAR_EVENTS.filter((e) => (e.dateEnd ?? e.dateStart) >= todayStr)
+      .sort((a, b) => a.dateStart.localeCompare(b.dateStart))
+      .slice(0, MAX_SHOWN);
+  }, []);
+
+  const count = events.length;
 
   const go = useCallback(
     (newDirection: number) => {
+      if (count === 0) return;
       setSlide(([current]) => {
         const next = (current + newDirection + count) % count;
         return [next, newDirection];
@@ -46,12 +71,14 @@ export default function EventsCarousel() {
 
   // Auto-advance, right to left, every AUTO_ADVANCE_MS — pausable
   useEffect(() => {
-    if (isPaused) return;
+    if (isPaused || count < 2) return;
     const timer = setInterval(() => go(1), AUTO_ADVANCE_MS);
     return () => clearInterval(timer);
-  }, [isPaused, go]);
+  }, [isPaused, go, count]);
 
-  const event = UPCOMING_EVENTS[index];
+  if (count === 0) return null;
+
+  const event = events[index];
 
   return (
     <section className="relative overflow-hidden bg-navy-800 py-20 sm:py-24" aria-labelledby="events-carousel-heading">
@@ -70,7 +97,7 @@ export default function EventsCarousel() {
 
         {/* Screen-reader announcement of slide changes */}
         <p className="sr-only" aria-live="polite">
-          Event {index + 1} of {count}: {event.title}, {event.dateLabel}, {event.location}
+          Event {index + 1} of {count}: {event.title}, {formatDateLabel(event.dateStart, event.dateEnd, event.timeLabel)}, {event.location}
         </p>
 
         <div
@@ -106,9 +133,9 @@ export default function EventsCarousel() {
               >
                 <div>
                   <span
-                    className={`inline-block rounded-full px-3 py-1 font-heading text-xs font-bold uppercase tracking-wide ${CATEGORY_STYLES[event.category]}`}
+                    className={`inline-block rounded-full px-3 py-1 font-heading text-xs font-bold uppercase tracking-wide ${COLOR_GROUP_STYLES[event.colorGroup]}`}
                   >
-                    {event.category}
+                    {event.type}
                   </span>
                   <h3 className="mt-4 font-display text-xl font-black uppercase text-white sm:text-2xl">
                     {event.title}
@@ -118,7 +145,7 @@ export default function EventsCarousel() {
                   <div className="flex items-center gap-2">
                     <CalendarDays size={16} className="shrink-0 text-green-400" aria-hidden="true" />
                     <dt className="sr-only">Date</dt>
-                    <dd>{event.dateLabel}</dd>
+                    <dd>{formatDateLabel(event.dateStart, event.dateEnd, event.timeLabel)}</dd>
                   </div>
                   <div className="flex items-center gap-2">
                     <MapPin size={16} className="shrink-0 text-green-400" aria-hidden="true" />
@@ -143,9 +170,9 @@ export default function EventsCarousel() {
         {/* Dot indicators + pause/play control */}
         <div className="mt-6 flex items-center justify-center gap-4">
           <div className="flex gap-2" role="tablist" aria-label="Choose event slide">
-            {UPCOMING_EVENTS.map((e, i) => (
+            {events.map((e, i) => (
               <button
-                key={e.title}
+                key={e.slug}
                 type="button"
                 role="tab"
                 aria-selected={i === index}
