@@ -7,7 +7,7 @@ export default function WeeklyMeeting() {
     <section className="bg-navy-950 py-14" aria-labelledby="weekly-heading">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <p className="eyebrow justify-center text-center">◆ Every Week</p>
+          <p className="eyebrow justify-center text-center"> Every Week</p>
           <h2 id="weekly-heading" className="mt-3 text-center text-3xl font-black text-white sm:text-4xl">
             Chapter Meeting
           </h2>
