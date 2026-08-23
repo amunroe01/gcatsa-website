@@ -6,7 +6,7 @@ export default function AdvisoryBoard() {
     <section className="bg-navy-950 py-16 sm:py-20" aria-labelledby="advisory-heading">
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
         <Reveal>
-          <p className="eyebrow justify-center">◆ Advisory Board</p>
+          <p className="eyebrow justify-center"> Advisory Board</p>
           <h2 id="advisory-heading" className="mt-3 text-3xl font-black text-white sm:text-4xl">
             TSA Advisory Board
           </h2>
