@@ -10,7 +10,7 @@ export default function FutureVision() {
           <div className="mx-auto mb-5 inline-flex h-14 w-14 items-center justify-center rounded-full bg-navy-800 text-green-400">
             <Rocket size={26} aria-hidden="true" />
           </div>
-          <p className="eyebrow justify-center">◆ Looking Ahead</p>
+          <p className="eyebrow justify-center"> Looking Ahead</p>
           <h2 id="vision-heading" className="mt-3 text-3xl font-black text-white sm:text-4xl">
             Our Vision
           </h2>
