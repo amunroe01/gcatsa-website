@@ -2,10 +2,10 @@ import Reveal from "@/components/Reveal";
 
 const TIMELINE = [
   {
-    year: "Est.",
+    year: "1999 to 2019",
     title: "Brookside Middle School TSA — Chapter 1302",
     description:
-      "For many years Brookside Middle School advisors and students have been involved in TSA competition, leadership, and hands-on STEM work. However during many years of not having an long term advisor Brookside middle school did not have an Advisor",
+      "For many years Brookside Middle School advisors and students have been involved in TSA competition, leadership, and hands-on STEM work. However, Brookside Middle School did not have a long term advisor.",
   },
   {
     year: "2023",
