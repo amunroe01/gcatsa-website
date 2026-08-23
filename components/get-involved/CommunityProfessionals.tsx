@@ -40,7 +40,7 @@ export default function CommunityProfessionals() {
             ))}
           </div>
 
-          
+          <a
             href="mailto:tsa@gulfcoastacademy.org?subject=Guest%20Speaker%20Interest"
             className="btn-primary mt-8 inline-flex"
           >
