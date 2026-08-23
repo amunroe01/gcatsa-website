@@ -32,7 +32,7 @@ export default function ChapterHistory() {
     <section className="bg-navy-50 py-16 sm:py-20" aria-labelledby="history-heading">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center">
-          <p className="eyebrow justify-center">◆ Chapter History</p>
+          <p className="eyebrow justify-center"> Chapter History</p>
           <h2 id="history-heading" className="mt-3 text-3xl font-black text-navy-800 sm:text-4xl">
             From Brookside to GCA
           </h2>
