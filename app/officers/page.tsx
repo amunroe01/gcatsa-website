@@ -16,7 +16,7 @@ export default function OfficersPage() {
         <div className="absolute inset-0 bg-circuit-grid bg-[size:40px_40px] opacity-30" aria-hidden="true" />
         <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <p className="eyebrow justify-center">◆ 2026 &amp; 2027 Chapter Team</p>
+            <p className="eyebrow justify-center"> 2026 &amp; 2027 Chapter Team</p>
             <h1 className="mt-3 text-4xl font-black text-white sm:text-5xl">Officers</h1>
             <p className="mt-5 font-body text-white/80">
               Eight students lead Gulf Coast Academy TSA this year — running
