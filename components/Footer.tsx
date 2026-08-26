@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Instagram, Twitter, Mail, MapPin } from "lucide-react";
+import { Facebook, Instagram, Twitter, Mail, MapPin, Phone } from "lucide-react";
 
 const QUICK_LINKS = [
   { href: "/events", label: "Events" },
@@ -16,13 +16,21 @@ export default function Footer() {
     <footer className="bg-navy-950 text-white/80">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4 lg:px-8">
         <div className="md:col-span-2">
-          <Image
-            src="/images/logo-horizontal-dark.png"
-            alt="Gulf Coast Academy of Innovation & Technology logo"
-            width={170}
-            height={125}
-            className="mb-4 h-16 w-auto"
-          />
+          
+            href="https://www.sarasotacountyschools.net/o/gulfcoastacademy"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Gulf Coast Academy of Innovation & Technology main school site (opens in a new tab)"
+            className="mb-4 inline-block"
+          >
+            <Image
+              src="/images/logo-round-gca.png"
+              alt="Gulf Coast Academy of Innovation & Technology logo"
+              width={120}
+              height={120}
+              className="h-20 w-20"
+            />
+          </a>
           <p className="max-w-sm text-sm leading-relaxed">
             Gulf Coast Academy TSA prepares tomorrow&apos;s innovators through
             leadership, technology, engineering, and design — proudly part of
@@ -30,21 +38,21 @@ export default function Footer() {
             Sarasota County Schools.
           </p>
           <div className="mt-5 flex gap-3">
-            <a
+            
               href="#"
               aria-label="Gulf Coast Academy TSA on Facebook"
               className="rounded-full border border-white/20 p-2 transition-colors hover:border-green-400 hover:text-green-400"
             >
               <Facebook size={18} aria-hidden="true" />
             </a>
-            <a
+            
               href="#"
               aria-label="Gulf Coast Academy TSA on Instagram"
               className="rounded-full border border-white/20 p-2 transition-colors hover:border-green-400 hover:text-green-400"
             >
               <Instagram size={18} aria-hidden="true" />
             </a>
-            <a
+            
               href="#"
               aria-label="Gulf Coast Academy TSA on X (Twitter)"
               className="rounded-full border border-white/20 p-2 transition-colors hover:border-green-400 hover:text-green-400"
@@ -77,15 +85,23 @@ export default function Footer() {
             <li className="flex items-start gap-2">
               <MapPin size={18} className="mt-0.5 shrink-0 text-green-400" aria-hidden="true" />
               <span>
-                Gulf Coast Academy of Innovation &amp; Technology
+                GCA TSA
                 <br />
-                Sarasota County Schools, FL
+                3636 S. Shade Ave, Room 7-102
+                <br />
+                Sarasota, FL 34239
               </span>
             </li>
             <li className="flex items-center gap-2">
               <Mail size={18} className="shrink-0 text-green-400" aria-hidden="true" />
-              <a href="mailto:tsa@gulfcoastacademy.org" className="rounded hover:underline">
-                tsa@gulfcoastacademy.org
+              <a href="mailto:alister.munroe@sarasotacountyschools.net" className="rounded hover:underline">
+                alister.munroe@sarasotacountyschools.net
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <Phone size={18} className="shrink-0 text-green-400" aria-hidden="true" />
+              <a href="tel:19413616462" className="rounded hover:underline">
+                941-361-6462 Ext 61591
               </a>
             </li>
           </ul>
