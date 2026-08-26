@@ -16,8 +16,7 @@ export default function Footer() {
     <footer className="bg-navy-950 text-white/80">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4 lg:px-8">
         <div className="md:col-span-2">
-          <a
-            href="https://www.sarasotacountyschools.net/o/gulfcoastacademy"
+          <a href="https://www.sarasotacountyschools.net/o/gulfcoastacademy"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Gulf Coast Academy of Innovation & Technology main school site (opens in a new tab)"
@@ -38,22 +37,19 @@ export default function Footer() {
             Sarasota County Schools.
           </p>
           <div className="mt-5 flex gap-3">
-            
-              href="#"
+            <a href="#"
               aria-label="Gulf Coast Academy TSA on Facebook"
               className="rounded-full border border-white/20 p-2 transition-colors hover:border-green-400 hover:text-green-400"
             >
               <Facebook size={18} aria-hidden="true" />
             </a>
-            
-              href="#"
+            <a href="#"
               aria-label="Gulf Coast Academy TSA on Instagram"
               className="rounded-full border border-white/20 p-2 transition-colors hover:border-green-400 hover:text-green-400"
             >
               <Instagram size={18} aria-hidden="true" />
             </a>
-            
-              href="#"
+            <a href="#"
               aria-label="Gulf Coast Academy TSA on X (Twitter)"
               className="rounded-full border border-white/20 p-2 transition-colors hover:border-green-400 hover:text-green-400"
             >
