@@ -16,7 +16,7 @@ export default function Footer() {
     <footer className="bg-navy-950 text-white/80">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4 lg:px-8">
         <div className="md:col-span-2">
-          
+          <a
             href="https://www.sarasotacountyschools.net/o/gulfcoastacademy"
             target="_blank"
             rel="noopener noreferrer"
