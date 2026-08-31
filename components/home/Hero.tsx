@@ -64,7 +64,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.6 }}
           className="mt-10 flex flex-col gap-4 sm:flex-row"
         >
-          <Link href="/get-involved" className="btn-primary">
+          <Link href="/join" className="btn-primary">
             Join TSA
             <ArrowRight size={18} aria-hidden="true" />
           </Link>
