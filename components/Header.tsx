@@ -74,7 +74,7 @@ export default function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <Link href="/get-involved" className="btn-primary text-sm">
+          <Link href="/join" className="btn-primary text-sm">
             Join TSA
           </Link>
         </div>
@@ -117,7 +117,7 @@ export default function Header() {
             })}
             <li className="pt-2">
               <Link
-                href="/get-involved"
+                href="/join"
                 onClick={() => setOpen(false)}
                 className="btn-primary w-full"
               >
