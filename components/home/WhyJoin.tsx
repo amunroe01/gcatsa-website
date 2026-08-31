@@ -73,7 +73,7 @@ export default function WhyJoin() {
         </div>
 
         <Reveal delay={0.3} className="mt-14 flex justify-center">
-          <Link href="/get-involved" className="btn-primary">
+          <Link href="/join" className="btn-primary">
             Join TSA
             <ArrowRight size={18} aria-hidden="true" />
           </Link>
